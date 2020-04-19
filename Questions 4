@@ -1,0 +1,41 @@
+# Question 4
+#### Cloning the website repo
+```
+git clone https://github.com/redashu/beginner-html-site-styled
+```
+
+#### Renaming the folder
+```
+mv beginner-html-site-styled webapp
+```
+
+#### Creating Dockerfile
+```
+FROM centos
+MAINTAINER mukesh.7755@gmail.com
+RUN yum install httpd -y
+COPY webapp /var/www/html/
+EXPOSE 80
+ENTRYPOINT httpd -DFOREGROUND
+```
+
+#### Running Container from the Image
+```
+docker run -d --name mukeshc4q4 -p 8081:80 mkmahto7:q4
+```
+
+#### Accessing the website
+[Link to Website](http://52.204.127.145:8081/)
+
+
+#### Tagging the image
+```
+docker tag mkmahto7:q4 mkmahto7/mukesh:q4
+```
+
+#### Pushing to Docker HUB
+```
+docker push mkmahto7/mukesh:q4
+```
+
+#### [Docker HUB Image Link](https://hub.docker.com/repository/docker/mkmahto/mukesh)
