@@ -1,0 +1,18 @@
+# Question 5
+
+#### Creating Docker Volume
+```
+docker volume create mukeshmahtoq5
+```
+
+#### Creating Container
+```
+docker run -it --name mukeshc5q5 -v mukeshmahtoq5:/adhocvol -v /etc/passwd:/user.txt alpine sh
+```
+
+#### Then inside the container run
+```
+wc -l user.txt > /adhocvol/usercount.txt
+```
+
+#### Lines Count: 28
